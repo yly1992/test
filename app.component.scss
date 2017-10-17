@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,700');
+#map {
+        position: relative;
+        left: 100px;
+        height: 230px;
+        width: 80%;
+        top: 100px;
+
+}
+.row{
+  position: relative;
+  left:100px;
+}
+#header{
+  font-size: 60px;
+  font-family: monospace;
+}
+
+.form-group{
+  position: fixed;
+  width: 300px;
+  margin-left:950px;
+  margin-top: 50px;
+}
+input{
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-image: url('../assets/rsz_search.png');
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 24px 12px 40px;
+}
+
+#city{
+  position: fixed;
+  margin-top: 100px;
+  margin-left: 950px;
+}
+#result{
+  position: fixed;
+  margin-left: 950px;
+  margin-top: 150px;
+}
+.center{
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+forecast{
+  .div{
+    display:inline;
+  }
+}
+@mixin transition {
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+.wrapper{
+  font:{
+    family:'Roboto';
+    // weight:100;
+  };
+  width: 30%;
+  height: 534px;
+  margin: 5em auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+
+  img{
+    width: 60%;
+    margin:0 20%;
+  }
+
+  .city{
+    font:{
+      size:2.2em;
+      weight:100;
+    }
+  }
+
+  .temperature{
+    font:{
+      size:3.5em;
+      weight:100;
+    }
+  }
+
+  .description{
+    font:{
+      size:1.2em;
+      weight:100;
+    }
+  }
+
+  .tempM{
+    font: {
+      size:1.5em;
+      weight:100;
+    }
+  }
+
+}
+
+
+body {
+  background: black;
+}
+
+figure {
+  margin: 5em auto;
+  width: 350px;
+  height: 150px;
+}
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<div class="container">
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js" type="text/javascript"></script>
+</head>
+<div class="text-center">
+  <h1>Geo Weather App</h1>
+  <div> <input placeholder="Search for location" autocorrect="off" autocapitalize="off" spellcheck="off"
+               type="text" class="form-control" #search [formControl]="searchControl">
+  </div>
+  <div>
+    <sebm-google-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="true" [zoom]="zoom" #map id="map">
+      <sebm-google-map-marker [latitude]="latitude" [longitude]="longitude"></sebm-google-map-marker>
+    </sebm-google-map>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br><br><br><br>
+  <h1 align="center">{{add}}</h1>
+  <h4 align="center">Temperature: {{temperature}}&deg;</h4>
+  <h4 align="center">Humidity: {{humidity}}&deg;</h4>
+  <p align="center">Summary: &ensp;{{summary}}&ensp;</p>
+
+<div align="center">
+  <div style="display: inline-block"  *ngFor="let dayWeather of forecast">
+    <div class = forecast style="display: inline-block">
+      <h6 class="date">&ensp;<b>{{dayWeather.date}}</b>&ensp; </h6>
+      <p>&ensp;{{dayWeather.img}}&ensp;</p>
+      <canvas id="icon1" width="34" height="34"></canvas>
+
+      <h6 class="tempM">Min temp : {{dayWeather.minTemp}}&deg;</h6>
+      <h6 class="tempM">Max temp : {{dayWeather.maxTemp}}&deg;</h6>
+      <h6>Humidity : {{dayWeather.humidity}}</h6>
+    </div>
+  </div>
+</div>
+</div>
+</html>
